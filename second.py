@@ -27,8 +27,148 @@ pygame.display.set_caption("1v1 Arcade Top-Down Football")
 # FPS kontrolü için saat
 clock = pygame.time.Clock()
 
-# Oyun süresini hesaplamak için başlangıç zamanı
-start_ticks = pygame.time.get_ticks()  # pygame.init()'den bu yana geçen milisaniye
+# Renk seçenekleri - menüde forma rengi seçmek için kullanılır
+COLOR_OPTIONS = [
+    ("Siyah", (0, 0, 0)),
+    ("Beyaz", (255, 255, 255)),
+    ("Kırmızı", (255, 0, 0)),
+    ("Mavi", (0, 0, 255)),
+    ("Yeşil", (0, 255, 0)),
+    ("Sarı", (255, 255, 0)),
+]
+
+# Yardımcı fonksiyonlar - ekrana yazı çizmek ve menüleri yönetmek için
+font = pygame.font.Font(None, 36)
+small_font = pygame.font.Font(None, 28)
+
+def draw_text(text, x, y, font_obj, color=WHITE, center=False):
+    """Ekrana metin çizmek için yardımcı fonksiyon."""
+    surf = font_obj.render(text, True, color)
+    rect = surf.get_rect()
+    if center:
+        rect.center = (x, y)
+    else:
+        rect.topleft = (x, y)
+    screen.blit(surf, rect)
+    return rect
+
+
+def run_settings_menu(player1_color_idx, player2_color_idx):
+    """Ayarlar menüsü: Her iki oyuncunun forma rengini seçmek için."""
+    menu_running = True
+    selected_player = 1  # 1 = sol oyuncu, 2 = sağ oyuncu
+
+    while menu_running:
+        for event in pygame.event.get():
+            if event.type == pygame.QUIT:
+                return None, None  # Çıkış
+            elif event.type == pygame.KEYDOWN:
+                if event.key == pygame.K_ESCAPE:
+                    return player1_color_idx, player2_color_idx
+                elif event.key == pygame.K_TAB:
+                    selected_player = 2 if selected_player == 1 else 1
+                elif event.key == pygame.K_LEFT:
+                    if selected_player == 1:
+                        player1_color_idx = (player1_color_idx - 1) % len(COLOR_OPTIONS)
+                    else:
+                        player2_color_idx = (player2_color_idx - 1) % len(COLOR_OPTIONS)
+                elif event.key == pygame.K_RIGHT:
+                    if selected_player == 1:
+                        player1_color_idx = (player1_color_idx + 1) % len(COLOR_OPTIONS)
+                    else:
+                        player2_color_idx = (player2_color_idx + 1) % len(COLOR_OPTIONS)
+                elif event.key == pygame.K_RETURN:
+                    return player1_color_idx, player2_color_idx
+
+        screen.fill(GREEN)
+        draw_text("SETTINGS", SCREEN_WIDTH // 2, 60, font, WHITE, center=True)
+        draw_text("TAB: switch player | Left/Right: change color | Enter: save | Esc: back", SCREEN_WIDTH // 2, 100, small_font, WHITE, center=True)
+
+        # Seçilen oyuncuyu belirt
+        draw_text(f"Selected player: {'Left' if selected_player == 1 else 'Right'}", SCREEN_WIDTH // 2, 140, font, WHITE, center=True)
+
+        # Renk seçeneklerini göster; metin kendi seçili rengi ile yazılıyor
+        p1_color_name = COLOR_OPTIONS[player1_color_idx][0]
+        p1_color = COLOR_OPTIONS[player1_color_idx][1]
+        p2_color_name = COLOR_OPTIONS[player2_color_idx][0]
+        p2_color = COLOR_OPTIONS[player2_color_idx][1]
+
+        p1_rect = draw_text(f"Left player color: {p1_color_name} (click to next)", SCREEN_WIDTH // 2, 190, font, p1_color, center=True)
+        p2_rect = draw_text(f"Right player color: {p2_color_name} (click to next)", SCREEN_WIDTH // 2, 230, font, p2_color, center=True)
+
+        pygame.display.flip()
+        clock.tick(30)
+
+        # fare tıklamaları
+        mouse_pos = pygame.mouse.get_pos()
+        if pygame.mouse.get_pressed()[0]:
+            if p1_rect.collidepoint(mouse_pos):
+                player1_color_idx = (player1_color_idx + 1) % len(COLOR_OPTIONS)
+                pygame.time.wait(150)
+            elif p2_rect.collidepoint(mouse_pos):
+                player2_color_idx = (player2_color_idx + 1) % len(COLOR_OPTIONS)
+                pygame.time.wait(150)
+
+
+def run_start_menu():
+    """Başlangıç menüsü: Oyunu başlatma ve ayarlara geçiş."""
+    menu_index = 0
+    options = ["Start Game", "Settings", "Quit"]
+    player1_color_idx = 0
+    player2_color_idx = 1
+
+    while True:
+        for event in pygame.event.get():
+            if event.type == pygame.QUIT:
+                return None, None, None
+            elif event.type == pygame.KEYDOWN:
+                if event.key == pygame.K_UP:
+                    menu_index = (menu_index - 1) % len(options)
+                elif event.key == pygame.K_DOWN:
+                    menu_index = (menu_index + 1) % len(options)
+                elif event.key == pygame.K_RETURN:
+                    if menu_index == 0:  # Start game
+                        return player1_color_idx, player2_color_idx, True
+                    elif menu_index == 1:  # Settings
+                        res = run_settings_menu(player1_color_idx, player2_color_idx)
+                        if res == (None, None):
+                            return None, None, None
+                        player1_color_idx, player2_color_idx = res
+                    else:  # Quit
+                        return None, None, None
+
+        screen.fill(GREEN)
+        draw_text("1v1 Football Game", SCREEN_WIDTH // 2, 60, font, WHITE, center=True)
+        draw_text("Up/Down: change option | Enter: select | Click items to choose", SCREEN_WIDTH // 2, 100, small_font, WHITE, center=True)
+
+        option_rects = []
+        for idx, opt in enumerate(options):
+            color = WHITE if idx == menu_index else (200, 200, 200)
+            rect = draw_text(opt, SCREEN_WIDTH // 2, 170 + idx * 40, font, color, center=True)
+            option_rects.append(rect)
+
+        # Şu anki forma renklerini göster (seçilen renklerle)
+        draw_text(f"Left player: {COLOR_OPTIONS[player1_color_idx][0]}", SCREEN_WIDTH // 2, 300, small_font, COLOR_OPTIONS[player1_color_idx][1], center=True)
+        draw_text(f"Right player: {COLOR_OPTIONS[player2_color_idx][0]}", SCREEN_WIDTH // 2, 330, small_font, COLOR_OPTIONS[player2_color_idx][1], center=True)
+
+        pygame.display.flip()
+        clock.tick(30)
+
+        if pygame.mouse.get_pressed()[0]:
+            mouse_pos = pygame.mouse.get_pos()
+            for idx, rect in enumerate(option_rects):
+                if rect.collidepoint(mouse_pos):
+                    menu_index = idx
+                    if idx == 0:
+                        return player1_color_idx, player2_color_idx, True
+                    elif idx == 1:
+                        res = run_settings_menu(player1_color_idx, player2_color_idx)
+                        if res == (None, None):
+                            return None, None, None
+                        player1_color_idx, player2_color_idx = res
+                    else:
+                        return None, None, None
+            pygame.time.wait(150)
 
 # Oyuncu sınıfı - sadece yukarı-aşağı hareket edebilen kaleci benzeri karakterler
 class Player:
@@ -89,15 +229,25 @@ class Ball:
         pygame.draw.circle(screen, BLACK, (int(self.x + spot_offset), int(self.y - spot_offset)), self.radius // 3)
         pygame.draw.circle(screen, BLACK, (int(self.x), int(self.y + spot_offset)), self.radius // 3)
 
-# Oyuncu ve top nesnelerini oluştur - sol taraftaki oyuncu W/S tuşlarıyla, sağdaki oyuncu ok tuşlarıyla kontrol edilir
-player1 = Player(50, 150, 20, 100, BLACK)  # Sol oyuncu
-player2 = Player(730, 150, 20, 100, BLACK)  # Sağ oyuncu
+# Başlangıç menüsünü çalıştır: forma renkleri ve ayarları seç
+player1_color_idx, player2_color_idx, started = run_start_menu()
+if not started:
+    pygame.quit()
+    sys.exit()
+
+# Seçilen renkleri kullanarak oyuncuları oluştur
+player1_color = COLOR_OPTIONS[player1_color_idx][1]
+player2_color = COLOR_OPTIONS[player2_color_idx][1]
+player1 = Player(50, 150, 20, 100, player1_color)  # Sol oyuncu
+player2 = Player(730, 150, 20, 100, player2_color)  # Sağ oyuncu
 ball = Ball(SCREEN_WIDTH // 2, SCREEN_HEIGHT // 2, 10, WHITE)  # Top oyunun ortasında başlar
+
+# Oyunun başlamasıyla birlikte süreyi sıfırla
+start_ticks = pygame.time.get_ticks()
 
 # Skor değişkenleri
 score1 = 0
 score2 = 0
-font = pygame.font.Font(None, 36)
 
 # Ana oyun döngüsü - oyun sürekli çalışırken bu döngü devam eder
 running = True
@@ -116,6 +266,19 @@ while running:
                 player2.direction = -1  # Yukarı hareket
             elif event.key == pygame.K_DOWN:
                 player2.direction = 1   # Aşağı hareket
+            elif event.key == pygame.K_ESCAPE:
+                # ESC ile menüye dön
+                res = run_start_menu()
+                if res == (None, None, None):
+                    running = False
+                    break
+                player1_color_idx, player2_color_idx, started = res
+                if not started:
+                    running = False
+                    break
+                player1.color = COLOR_OPTIONS[player1_color_idx][1]
+                player2.color = COLOR_OPTIONS[player2_color_idx][1]
+                start_ticks = pygame.time.get_ticks()
         elif event.type == pygame.KEYUP:
             if event.key in (pygame.K_w, pygame.K_s):
                 player1.direction = 0  # Hareketi durdur
