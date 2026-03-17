@@ -37,49 +37,19 @@ LANGUAGE_LABELS = {"TR": "Türkçe", "EN": "English", "VI": "Tiếng Việt"}
 
 TEXTS = {
     "TR": {
-        "start_title": "1v1 Futbol Oyunu",
-        "start_info": "Yukarı/Aşağı: seçenek değiştir | Enter: seç | Tıkla: seç",
-        "start_options": ["Oyunu Başlat", "Ayarlar", "Dil Seçimi", "Çıkış"],
-        "settings_title": "AYARLAR",
-        "settings_info": "TAB: oyuncu değiştir | Sol/Sağ: renk değiştir | Enter: kaydet | Esc: geri",
-        "selected_player": "Seçili oyuncu",
-        "left_player_color": "Sol oyuncu rengi",
-        "right_player_color": "Sağ oyuncu rengi",
-        "pause_title": "Oyun duraklatıldı",
-        "pause_info": "Yukarı/Aşağı: seçenek değiştir | Enter: seç | Esc: devam",
-        "pause_options": ["Devam", "Ayarlar", "Ana Menü", "Çıkış"],
-        "scoreboard": "Skor",
-        "time_text": "Süre",
+        "start_title": "1v1 Futbol Oyunu", "start_info": "Yukarı/Aşağı: seçenek değiştir | Enter: seç | Tıkla: seç", "start_options": ["Oyunu Başlat", "Ayarlar", "Dil Seçimi", "Çıkış"],
+        "settings_title": "AYARLAR", "settings_info": "TAB: oyuncu değiştir | Sol/Sağ: renk değiştir | Enter: kaydet | Esc: geri", "selected_player": "Seçili oyuncu", "left_player_color": "Sol oyuncu rengi", "right_player_color": "Sağ oyuncu rengi",
+        "pause_title": "Oyun duraklatıldı", "pause_info": "Yukarı/Aşağı: seçenek değiştir | Enter: seç | Esc: devam", "pause_options": ["Devam", "Ayarlar", "Ana Menü", "Çıkış"], "scoreboard": "Skor", "time_text": "Süre",
     },
     "EN": {
-        "start_title": "1v1 Football Game",
-        "start_info": "Up/Down: change option | Enter: select | Click: choose",
-        "start_options": ["Start Game", "Settings", "Language", "Quit"],
-        "settings_title": "SETTINGS",
-        "settings_info": "TAB: switch player | Left/Right: change color | Enter: save | Esc: back",
-        "selected_player": "Selected player",
-        "left_player_color": "Left player color",
-        "right_player_color": "Right player color",
-        "pause_title": "Game Paused",
-        "pause_info": "Up/Down: change option | Enter: select | Esc: resume",
-        "pause_options": ["Resume", "Settings", "Main Menu", "Quit"],
-        "scoreboard": "Score",
-        "time_text": "Time",
+        "start_title": "1v1 Football Game", "start_info": "Up/Down: change option | Enter: select | Click: choose", "start_options": ["Start Game", "Settings", "Language", "Quit"],
+        "settings_title": "SETTINGS", "settings_info": "TAB: switch player | Left/Right: change color | Enter: save | Esc: back", "selected_player": "Selected player", "left_player_color": "Left player color", "right_player_color": "Right player color",
+        "pause_title": "Game Paused", "pause_info": "Up/Down: change option | Enter: select | Esc: resume", "pause_options": ["Resume", "Settings", "Main Menu", "Quit"], "scoreboard": "Score", "time_text": "Time",
     },
     "VI": {
-        "start_title": "Trò chơi Bóng đá 1v1",
-        "start_info": "Lên/Xuống: chọn | Enter: xác nhận | Nhấn: chọn",
-        "start_options": ["Bắt đầu", "Cài đặt", "Ngôn ngữ", "Thoát"],
-        "settings_title": "CÀI ĐẶT",
-        "settings_info": "TAB: đổi người | Trái/Phải: đổi màu | Enter: lưu | Esc: trở lại",
-        "selected_player": "Người chơi đang chọn",
-        "left_player_color": "Màu trái",
-        "right_player_color": "Màu phải",
-        "pause_title": "Tạm dừng", 
-        "pause_info": "Lên/Xuống: chọn | Enter: xác nhận | Esc: tiếp tục",
-        "pause_options": ["Tiếp tục", "Cài đặt", "Menu chính", "Thoát"],
-        "scoreboard": "Điểm",
-        "time_text": "Thời gian",
+        "start_title": "Trò chơi Bóng đá 1v1", "start_info": "Lên/Xuống: chọn | Enter: xác nhận | Nhấn: chọn", "start_options": ["Bắt đầu", "Cài đặt", "Ngôn ngữ", "Thoát"],
+        "settings_title": "CÀI ĐẶT", "settings_info": "TAB: đổi người | Trái/Phải: đổi màu | Enter: lưu | Esc: trở lại", "selected_player": "Người chơi đang chọn", "left_player_color": "Màu trái", "right_player_color": "Màu phải",
+        "pause_title": "Tạm dừng", "pause_info": "Lên/Xuống: chọn | Enter: xác nhận | Esc: tiếp tục", "pause_options": ["Tiếp tục", "Cài đặt", "Menu chính", "Thoát"], "scoreboard": "Điểm", "time_text": "Thời gian",
     },
 }
 
@@ -93,14 +63,11 @@ COLOR_NAMES = {
 current_language = "EN"
 
 COLOR_OPTIONS = [
-    ("Siyah", (0, 0, 0)),
-    ("Beyaz", (255, 255, 255)),
-    ("Kırmızı", (255, 0, 0)),
-    ("Mavi", (0, 0, 255)),
-    ("Yeşil", (0, 255, 0)),
-    ("Sarı", (255, 255, 0)),
+    ("Siyah", (0, 0, 0)), ("Beyaz", (255, 255, 255)), ("Kırmızı", (255, 0, 0)), 
+    ("Mavi", (0, 0, 255)), ("Yeşil", (0, 255, 0)), ("Sarı", (255, 255, 0))
 ]
 
+# Bilgisayardaki uygun fontları arıyoruz ki Asya dilleri (Vietnamca) bozuk çıkmasın (kare kare görünmesin).
 preferred_fonts = ["Arial", "Tahoma", "Segoe UI", "Noto Sans", "Noto Sans CJK", "Noto Sans Symbols"]
 loaded_font_name = None
 for f in preferred_fonts:
@@ -112,6 +79,7 @@ for f in preferred_fonts:
     except Exception:
         continue
 
+# Seçilen font yüklendi, eğer hiçbiri yüklenemezse varsayılan font kullanılacak / Loaded the selected font, if none can be loaded, default font will be used
 if loaded_font_name is None:
     font = pygame.font.Font(None, 36)
     small_font = pygame.font.Font(None, 28)
@@ -133,6 +101,7 @@ def handle_resize_event(event):
 
 def draw_text(text, x, y, font_obj, color=WHITE, center=False):
     # Ekrana metin çizmek için yardımcı fonksiyon / Helper function to draw text on the screen
+    # center=True gelirse yazıyı tam ortalar.
     surf = font_obj.render(text, True, color)
     rect = surf.get_rect()
     if center:
@@ -146,6 +115,7 @@ def run_language_menu(current_language):
     # Dil seçimi menüsü / Language selection menu
     menu_index = LANGUAGES.index(current_language)
     while True:
+        # 1. Klavyeden sağ/sol ok tuşlarına basıldıkça listedeki diller arasında geziyoruz.
         for event in pygame.event.get():
             handle_resize_event(event)
             if event.type == pygame.QUIT:
@@ -158,16 +128,19 @@ def run_language_menu(current_language):
                 elif event.key == pygame.K_RETURN:
                     return LANGUAGES[menu_index]
 
+        # 2. Ekranı yeşile boyayıp başlığı yazıyoruz.
         screen.fill(GREEN)
         sw, sh = get_screen_size()
         draw_text("Select Language / Dil Seçimi / Chọn ngôn ngữ", sw * 0.5, sh * 0.15, font, WHITE, center=True)
 
+        # 3. Dilleri alt alta listeliyoruz. Seçili olan menü (menu_index) beyaz, diğerleri gri (200,200,200) oluyor.
         option_rects = []
         for idx, code in enumerate(LANGUAGES):
             color = WHITE if idx == menu_index else (200, 200, 200)
             rect = draw_text(LANGUAGE_LABELS[code], sw * 0.5, sh * (0.30 + idx * 0.08), font, color, center=True)
             option_rects.append(rect)
 
+        # 4. Fareyle bir yazının üstüne sol tıklandıysa (get_pressed()[0]), o dili seçip çıkıyoruz.
         if pygame.mouse.get_pressed()[0]:
             mouse_pos = pygame.mouse.get_pos()
             for idx, rect in enumerate(option_rects):
@@ -185,6 +158,8 @@ def run_settings_menu(player1_color_idx, player2_color_idx, current_language):
     selected_player = 1 
 
     while menu_running:
+        # 1. TAB tuşu ile oyuncu 1 ve oyuncu 2 arasında geçiş yapıyoruz.
+        # 2. Sol/Sağ ok tuşlarıyla o an seçili oyuncunun forma rengini değiştiriyoruz.
         for event in pygame.event.get():
             handle_resize_event(event)
             if event.type == pygame.QUIT:
@@ -207,13 +182,14 @@ def run_settings_menu(player1_color_idx, player2_color_idx, current_language):
                 elif event.key == pygame.K_RETURN:
                     return player1_color_idx, player2_color_idx
 
+        # Ekranı temizleyip başlıkları ve kimin rengini değiştirdiğimizi yazıyoruz.
         screen.fill(GREEN)
         sw, sh = get_screen_size()
         draw_text(menu_text["settings_title"], sw * 0.5, sh * 0.15, font, WHITE, center=True)
         draw_text(menu_text["settings_info"], sw * 0.5, sh * 0.22, small_font, WHITE, center=True)
-
         draw_text(f"{menu_text['selected_player']}: {'Left' if selected_player == 1 else 'Right'}", sw * 0.5, sh * 0.30, font, WHITE, center=True)
 
+        # Oyuncu 1 ve Oyuncu 2'nin o anki güncel renklerini ekrana kendi renginde bastırıyoruz.
         p1_color_name = COLOR_NAMES[current_language][player1_color_idx]
         p1_color = COLOR_OPTIONS[player1_color_idx][1]
         p2_color_name = COLOR_NAMES[current_language][player2_color_idx]
@@ -225,6 +201,7 @@ def run_settings_menu(player1_color_idx, player2_color_idx, current_language):
         pygame.display.flip()
         clock.tick(30)
 
+        # Ekranda farenin sol tuşuna basılırsa renk seçimi klavye olmadan da yapılabilsin diye.
         mouse_pos = pygame.mouse.get_pos()
         if pygame.mouse.get_pressed()[0]:
             if p1_rect.collidepoint(mouse_pos):
@@ -243,6 +220,7 @@ def run_start_menu(current_language):
     player2_color_idx = 1
 
     while True:
+        # Oyunu Başlat, Ayarlar, Dil Seçimi butonları arasında yukarı/aşağı geziniyoruz.
         for event in pygame.event.get():
             handle_resize_event(event)
             if event.type == pygame.QUIT:
@@ -253,6 +231,7 @@ def run_start_menu(current_language):
                 elif event.key == pygame.K_DOWN:
                     menu_index = (menu_index + 1) % len(options)
                 elif event.key == pygame.K_RETURN:
+                    # Enter'a basılan indexe göre oyuna dönüyoruz (0) ayarlara (1) ya da dil (2) ekranına gidiyoruz.
                     if menu_index == 0:  
                         return player1_color_idx, player2_color_idx, True
                     elif menu_index == 1:  
@@ -274,12 +253,14 @@ def run_start_menu(current_language):
         draw_text(menu_text["start_title"], sw * 0.5, sh * 0.15, font, WHITE, center=True)
         draw_text(menu_text["start_info"], sw * 0.5, sh * 0.22, small_font, WHITE, center=True)
 
+        # Seçili menü maddesini BEYAZ, diğerlerini GRİ çiziyoruz.
         option_rects = []
         for idx, opt in enumerate(options):
             color = WHITE if idx == menu_index else (200, 200, 200)
             rect = draw_text(opt, sw * 0.5, sh * (0.34 + idx * 0.08), font, color, center=True)
             option_rects.append(rect)
 
+        # Ana menünün en altında oyuncuların hangi renk formayı giyeceklerini özet geçiyoruz.
         left_summary = f"{menu_text['left_player_color']} - {COLOR_NAMES[current_language][player1_color_idx]}"
         right_summary = f"{menu_text['right_player_color']} - {COLOR_NAMES[current_language][player2_color_idx]}"
         draw_text(left_summary, sw * 0.5, sh * 0.78, small_font, COLOR_OPTIONS[player1_color_idx][1], center=True)
@@ -288,6 +269,7 @@ def run_start_menu(current_language):
         pygame.display.flip()
         clock.tick(30)
 
+        # Ana menüde fareyle bir seçeneğe tıklanırsa çalışacak kısım (Fare tespiti)
         if pygame.mouse.get_pressed()[0]:
             mouse_pos = pygame.mouse.get_pos()
             for idx, rect in enumerate(option_rects):
@@ -310,23 +292,35 @@ def run_start_menu(current_language):
                         return None, None, None
             pygame.time.wait(150)
 
+# =========================================================================
+# 📌 ÖZET: DURAKLATMA (PAUSE) MENÜSÜ
+# Oyun esnasında ESC tuşuna basıldığında oyun döngüsü durur ve bu 
+# fonksiyon çalışır. Oyuncuya "Devam, Ayarlar, Ana Menü, Çıkış" seçeneklerini 
+# sunar. Klavye veya fare ile yapılan seçime göre ana oyun döngüsüne 
+# hangi aksiyonla dönüleceğini (resume, main_menu, quit) bildirir.
+# =========================================================================
+
 def run_pause_menu(current_language, player1_color_idx, player2_color_idx):
-    # Duraklatma menüsü / Pause menu
+    # Oyun içi duraklatma (Pause) menüsü / In-game pause menu
+    # [TÜYO]: 'def run_pause_menu' kısmını seç. Bu fonksiyonun oyun döngüsünü durdurup yeni bir "menü döngüsü" (menu loop) başlattığını, böylece oyunun arka planda güvenle beklemede kaldığını (pause) anlat.
     menu_text = TEXTS[current_language]
     menu_index = 0
     options = menu_text["pause_options"]
 
     while True:
+        # 1. Klavye ve pencere olaylarını dinliyoruz / Listening for keyboard and window events
         for event in pygame.event.get():
             handle_resize_event(event)
             if event.type == pygame.QUIT:
                 return "quit", player1_color_idx, player2_color_idx
             elif event.type == pygame.KEYDOWN:
+                # Yukarı ve aşağı ok tuşlarıyla menüde gezinme / Navigating the menu with up and down arrow keys
                 if event.key == pygame.K_UP:
                     menu_index = (menu_index - 1) % len(options)
                 elif event.key == pygame.K_DOWN:
                     menu_index = (menu_index + 1) % len(options)
                 elif event.key == pygame.K_RETURN:
+                    # Enter tuşuna basıldığında seçilen seçeneği uygula / Execute the selected option when Enter is pressed
                     if menu_index == 0:
                         return "resume", player1_color_idx, player2_color_idx
                     elif menu_index == 1:
@@ -339,12 +333,14 @@ def run_pause_menu(current_language, player1_color_idx, player2_color_idx):
                     else:
                         return "quit", player1_color_idx, player2_color_idx
 
+        # 2. Ekranı temizle ve menü başlıklarını çiz / Clear the screen and draw menu texts
         screen.fill(GREEN)
         sw, sh = get_screen_size()
         draw_text(menu_text["pause_title"], sw * 0.5, sh * 0.15, font, WHITE, center=True)
         draw_text(menu_text["pause_info"], sw * 0.5, sh * 0.22, small_font, WHITE, center=True)
 
         option_rects = []
+        # 3. Seçenekleri ekrana bas ve seçili olanı beyaz yap / Print options to screen and highlight the selected one in white
         for idx, opt in enumerate(options):
             color = WHITE if idx == menu_index else (200, 200, 200)
             rect = draw_text(opt, sw * 0.5, sh * (0.34 + idx * 0.07), font, color, center=True)
@@ -353,6 +349,7 @@ def run_pause_menu(current_language, player1_color_idx, player2_color_idx):
         pygame.display.flip()
         clock.tick(30)
 
+        # 4. Fare tıklamalarını kontrol et / Check for mouse clicks
         if pygame.mouse.get_pressed()[0]:
             mouse_pos = pygame.mouse.get_pos()
             for idx, rect in enumerate(option_rects):
@@ -375,6 +372,7 @@ def run_pause_menu(current_language, player1_color_idx, player2_color_idx):
 # [TÜYO]: 'class Player:' satırını seç. Sınıfları (Classes) çocuklara bir fabrika veya şablon (blueprint) gibi anlattığını söyle. Tek bir şablon yazıp hem Oyuncu 1 hem de Oyuncu 2'yi kolayca oluşturduğumuzu belirt.
 class Player:
     def __init__(self, x, y, width, height, color):
+        # Oyuncunun (kalecinin) ekrandaki koordinatları, boyutu ve rengi atanıyor.
         self.x = x
         self.y = y
         self.width = width
@@ -399,6 +397,7 @@ class Player:
 # [TÜYO]: 'self.speed_y' kısmını seç. Burada çocuklara temel fizik öğrettiğini, top üst duvara çarptığında sadece Y eksenindeki hızını tersine çevirerek sekmesini sağladığımızı anlat.
 class Ball:
     def __init__(self, x, y, radius, color):
+        # Top başlangıçta merkeze atılır ve sağa/sola-aşağı/yukarı rastgele bir yön seçer (choice).
         self.x = x
         self.y = y
         self.radius = radius
@@ -407,6 +406,7 @@ class Ball:
         self.speed_y = random.choice([-3, 3])  
 
     def move(self):
+        # Topu sürekli olarak X ve Y yönünde itiyoruz.
         self.x += self.speed_x
         self.y += self.speed_y
 
@@ -425,12 +425,17 @@ class Ball:
             self.speed_x = -self.speed_x  
 
     def draw(self, screen):
+        # Topu sadece beyaz bir daire olarak değil, üstüne ufak siyah lekeler atarak gerçek futbol topu gibi çiziyoruz.
         pygame.draw.circle(screen, self.color, (int(self.x), int(self.y)), self.radius)
         spot_offset = self.radius // 2
         pygame.draw.circle(screen, BLACK, (int(self.x - spot_offset), int(self.y - spot_offset)), self.radius // 3)
         pygame.draw.circle(screen, BLACK, (int(self.x + spot_offset), int(self.y - spot_offset)), self.radius // 3)
         pygame.draw.circle(screen, BLACK, (int(self.x), int(self.y + spot_offset)), self.radius // 3)
 
+# ==========================================
+# OYUN BAŞLATMA ÖNCESİ HAZIRLIK
+# Menüler çalıştırılır. Oyuncular menüden çıkıp "Başla" dediğinde kaleciler ve top sahadaki yerlerine yerleştirilir.
+# ==========================================
 selected_language = run_language_menu(current_language)
 if selected_language is None:
     pygame.quit()
@@ -451,7 +456,6 @@ ball = Ball(sw // 2, sh // 2, 10, WHITE)
 
 start_ticks = pygame.time.get_ticks()
 paused_time = 0
-
 score1 = 0
 score2 = 0
 
@@ -465,6 +469,8 @@ while running:
         handle_resize_event(event)
         if event.type == pygame.QUIT:
             running = False
+        
+        # KEYDOWN = Tuşa basıldığı an. Yönleri ayarlıyoruz (-1 yukarı, 1 aşağı)
         elif event.type == pygame.KEYDOWN:
             if event.key == pygame.K_w:
                 player1.direction = -1  
@@ -474,16 +480,19 @@ while running:
                 player2.direction = -1  
             elif event.key == pygame.K_DOWN:
                 player2.direction = 1   
+            
+            # Eğer oyun sırasında ESC tuşuna basılırsa, Pause menüsünü ekrana getir.
             elif event.key == pygame.K_ESCAPE:
                 pause_start = pygame.time.get_ticks()
                 action, player1_color_idx, player2_color_idx = run_pause_menu(current_language, player1_color_idx, player2_color_idx)
                 pause_end = pygame.time.get_ticks()
-                paused_time += (pause_end - pause_start)
+                paused_time += (pause_end - pause_start) # Pause süresini maç süresinden düşüyoruz.
 
                 if action == "quit":
                     running = False
                     break
-
+                
+                # Eğer ana menüye dön derse, skoru ve nesneleri sıfırlayıp baştan kuruyoruz.
                 if action == "main_menu":
                     start_menu_result = run_start_menu(current_language)
                     if start_menu_result == (None, None, None):
@@ -503,8 +512,11 @@ while running:
                     start_ticks = pygame.time.get_ticks()
                     paused_time = 0
 
+                # Pause'dan dönünce güncel renkleri tekrar adamlara atıyoruz.
                 player1.color = COLOR_OPTIONS[player1_color_idx][1]
                 player2.color = COLOR_OPTIONS[player2_color_idx][1]
+        
+        # KEYUP = Tuştan elini çektiği an. Karakteri durdur (direction = 0)
         elif event.type == pygame.KEYUP:
             if event.key in (pygame.K_w, pygame.K_s):
                 player1.direction = 0  
@@ -520,26 +532,30 @@ while running:
     ball.check_collision(player2)
 
     # Gol kontrolü - top kalenin arkasına geçerse karşı takım puan alır / Goal check - opponent scores if the ball passes behind the goal
+    # Kalenin en üstü ile en altı (goal_top ve goal_bottom) arasındaki mesafe hesaplanıyor.
     sw, sh = get_screen_size()
     goal_top = (sh - GOAL_HEIGHT) // 2
     goal_bottom = goal_top + GOAL_HEIGHT
 
     in_vertical_range = (ball.y - ball.radius) >= goal_top and (ball.y + ball.radius) <= goal_bottom
 
+    # Top SOL ekran çizgisini geçtiyse (<= 0)
     if ball.x - ball.radius <= 0:
-        if in_vertical_range:
+        if in_vertical_range: # Kalenin tam içindeyse GOL olur.
             score2 += 1
             ball = Ball(sw // 2, sh // 2, 10, WHITE)
             start_ticks = pygame.time.get_ticks()
-        else:
+        else: # Kale dışından duvara vurduysa seker (Gol sayılmaz)
             ball.x = ball.radius
             ball.speed_x = -ball.speed_x
+            
+    # Top SAĞ ekran çizgisini geçtiyse (>= sw)
     elif ball.x + ball.radius >= sw:
-        if in_vertical_range:
+        if in_vertical_range: # Kalenin tam içindeyse GOL olur.
             score1 += 1
             ball = Ball(sw // 2, sh // 2, 10, WHITE)
             start_ticks = pygame.time.get_ticks()
-        else:
+        else: # Kale dışından duvara vurduysa seker (Gol sayılmaz)
             ball.x = sw - ball.radius
             ball.speed_x = -ball.speed_x
 
@@ -550,11 +566,13 @@ while running:
     goal_top = (sh - GOAL_HEIGHT) // 2
     goal_bottom = goal_top + GOAL_HEIGHT
 
+    # Pygame kütüphanesiyle sol ve sağ kale direkleri kalın dikdörtgen (rect) olarak çiziliyor.
     pygame.draw.rect(screen, WHITE, (0, goal_top, GOAL_WIDTH, GOAL_HEIGHT))  
     pygame.draw.rect(screen, WHITE, (0, goal_top, GOAL_DEPTH, GOAL_WIDTH))  
     pygame.draw.rect(screen, WHITE, (sw - GOAL_WIDTH, goal_top, GOAL_WIDTH, GOAL_HEIGHT))  
     pygame.draw.rect(screen, WHITE, (sw - GOAL_DEPTH, goal_top, GOAL_DEPTH, GOAL_WIDTH))  
 
+    # For döngüleriyle kale içindeki o ağları (file desenini) küçük çizgiler (line) halinde çiziyoruz.
     for x in range(GOAL_WIDTH + NET_SPACING, GOAL_DEPTH, NET_SPACING):
         pygame.draw.line(screen, NET_COLOR, (x, goal_top), (x, goal_bottom), 1)
     for y in range(goal_top + NET_SPACING, goal_bottom, NET_SPACING):
@@ -565,36 +583,47 @@ while running:
     for y in range(goal_top + NET_SPACING, goal_bottom, NET_SPACING):
         pygame.draw.line(screen, NET_COLOR, (sw - GOAL_DEPTH, y), (sw, y), 1)
 
+    # SAHA ÇİZGİLERİ: Tam ortaya düz bir çizgi ve bir yuvarlak (orta saha) çizilir.
     pygame.draw.line(screen, WHITE, (sw // 2, 0), (sw // 2, sh), 2)  
     pygame.draw.circle(screen, WHITE, (sw // 2, sh // 2), 50, 2)  
 
+    # OYUNCU VE TOP ÇİZİMİ: Her obje kendi draw metodunu çağırarak ekrana kendini basar.
     player1.draw(screen)
     player2.draw(screen)
     ball.draw(screen)
 
+    # ZAMANLAYICI MANTIĞI: Pygame'in geçen milisaniyesini saniyeye (1000'e bölerek) ve dakikaya (60'a bölerek) çeviriyoruz.
     elapsed_seconds = (pygame.time.get_ticks() - start_ticks - paused_time) // 1000
     minutes = elapsed_seconds // 60
     seconds = elapsed_seconds % 60
     timer_text = f"{minutes:02}:{seconds:02}"
+    
+    # Render ile yazıyı görsele dönüştürüyoruz.
     timer_text_surface = small_font.render(f"{TEXTS[current_language]['time_text']}: {timer_text}", True, WHITE)
 
+    # SKOR TABELASI: Üst orta kısma "Skor" kelimesini, hemen soluna ve sağına rakamları basıyoruz.
     score_label = f"{TEXTS[current_language]['scoreboard']}"
     score_label_surf = small_font.render(score_label, True, WHITE)
     score_label_rect = score_label_surf.get_rect(center=(sw * 0.5, 12))
     screen.blit(score_label_surf, score_label_rect)
 
+    # Oyuncuların skor numaralarını (1, 2) oyuncunun kendi forma rengine göre renklendiriyoruz.
     left_score_surf = small_font.render(str(score1), True, COLOR_OPTIONS[player1_color_idx][1])
     right_score_surf = small_font.render(str(score2), True, COLOR_OPTIONS[player2_color_idx][1])
 
+    # Ortadan 40 pixel (padding) sağa ve sola kaydırarak ekranda ortalıyoruz.
     padding = 40
     left_score_rect = left_score_surf.get_rect(center=(sw * 0.5 - padding, 35))
     right_score_rect = right_score_surf.get_rect(center=(sw * 0.5 + padding, 35))
 
+    # blit = "oluşturulan yazıyı ekran zeminine yapıştır" komutudur.
     screen.blit(left_score_surf, left_score_rect)
     screen.blit(right_score_surf, right_score_rect)
 
+    # Zamanlayıcıyı ekranın sağ üst köşesine (sw - genişlik - 10px) yapıştırıyoruz.
     screen.blit(timer_text_surface, (sw - timer_text_surface.get_width() - 10, 10))
 
+    # Sol üst köşeye Player 1'in rengini, sağ üst köşeye Player 2'nin rengini yazıyoruz.
     p1_color_name = COLOR_NAMES[current_language][player1_color_idx]
     p2_color_name = COLOR_NAMES[current_language][player2_color_idx]
     draw_text(f"{TEXTS[current_language]['left_player_color']}: {p1_color_name}", 10, 40, small_font, COLOR_OPTIONS[player1_color_idx][1], center=False)
@@ -605,9 +634,12 @@ while running:
     right_rect.topright = (sw - 10, 40)
     screen.blit(right_surf, right_rect)
 
+    # Arka planda çizilen her şeyi monitöre aktar (Flip)
     pygame.display.flip()
 
+    # Bu döngüyü saniyede maksimum 60 kere çalıştır (Çok hızlı dönmesini engeller)
     clock.tick(60)
 
+# Döngü bittiğinde Pygame'i güvenli bir şekilde kapatır.
 pygame.quit()
 sys.exit()
